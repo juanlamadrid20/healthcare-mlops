@@ -1,0 +1,33 @@
+resources:
+  experiments:
+      
+    healthcare_model_experiments:
+      name: "/Users/juan.lamadrid@databricks.com/experiments/healthcare-mlops-${bundle.target}/healthcare_model_experiments"
+      tags:
+        - key: "project"
+          value: "healthcare-insurance-mlops"
+        - key: "environment"
+          value: "${bundle.target}"
+        - key: "component"
+          value: "model-training"
+
+  # model_serving_endpoints:
+  #   healthcare_insurance_endpoint:
+  #     name: "healthcare-insurance-${bundle.target}"
+  #     config:
+  #       served_entities:
+  #         - entity_name: "${var.catalog}.${var.ml_schema}.${var.model_name}"
+  #           entity_version: "1"
+  #           workload_size: "Small"
+  #           scale_to_zero_enabled: true
+  #       traffic_config:
+  #         routes:
+  #           - served_model_name: "${var.model_name}-1"
+  #             traffic_percentage: 100
+  #     tags:
+  #       - key: "project"
+  #         value: "healthcare-insurance-mlops"
+  #       - key: "environment"
+  #         value: "${bundle.target}"
+  #       - key: "team"
+  #         value: "data-science"
