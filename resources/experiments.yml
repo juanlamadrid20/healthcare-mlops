@@ -2,7 +2,8 @@ resources:
   experiments:
       
     healthcare_model_experiments:
-      name: "/Users/juan.lamadrid@databricks.com/experiments/healthcare-mlops-${bundle.target}/healthcare_model_experiments"
+      # name: "/Users/juan.lamadrid@databricks.com/experiments/healthcare-mlops-${bundle.target}/healthcare_model_experiments"
+      name: "/Workspace/Users/${workspace.current_user.userName}/ml/experiments/healthcare-mlops-${bundle.target}/"
       tags:
         - key: "project"
           value: "healthcare-insurance-mlops"
